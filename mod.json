@@ -1,0 +1,47 @@
+{
+    "geode": "5.11.2",
+    "gd": {
+        "win": "2.2081",
+        "android": "2.2081",
+        "mac": "2.2081"
+    },
+    "id": "jaxer14.fast-frame-windows",
+    "name": "Fast Frame Windows",
+    "version": "v1.0.0",
+    "developer": "jaxer14",
+    "description": "Measures how many frames you had for every click, fast. It saves the game state before each click and halves its way to the window instead of replaying the whole level over and over.",
+    "tags": [
+        "gameplay",
+        "utility"
+    ],
+    "settings": {
+        "record": {
+            "name": "Record runs",
+            "description": "Keep a record of your clicks and the game state around them while you play, so a run can be analyzed from the pause menu. Turn this off if you do not use the mod.",
+            "type": "bool",
+            "default": true
+        },
+        "max-window": {
+            "name": "Largest window measured",
+            "description": "How many frames earlier and later each click is tested, at most. Higher values take a little longer.",
+            "type": "int",
+            "default": 12,
+            "min": 4,
+            "max": 30,
+            "control": {
+                "slider": true
+            }
+        },
+        "lookahead": {
+            "name": "Look-ahead frames",
+            "description": "How long after a click the player has to survive for the click to count. Longer is stricter and slower.",
+            "type": "int",
+            "default": 60,
+            "min": 30,
+            "max": 240,
+            "control": {
+                "slider": true
+            }
+        }
+    }
+}
